@@ -7,7 +7,37 @@ body{
 	background:#e9e9e9;
 }
 
-.nav{
+/* NAVBAR */
+
+nav{
+	width:100%;
+	background-color:#FFFFFF;
+	.container{
+		margin: 0px auto;
+	}
+}
+
+.logo{
+	width:50%;
+	height:50px;
+	img{
+	    width: 35px;
+	    position: relative;
+	    left: -30px;
+	    top: 6px;
+	}
+	span{
+		position: absolute;
+	    top: 13px;
+	    left: 77px;
+	    font-size: 16px;
+	    font-weight: 500;
+	    color:#B5B5B5;
+	}
+}
+
+/* FILTROS */
+.cajas-filtros{
 	width:90%;
 	height:50px;
 }
