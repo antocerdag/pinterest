@@ -36,6 +36,26 @@ nav{
 	}
 }
 
+.input{
+	position: absolute;
+    top: 12px;
+    left: 146px;
+    	input{
+		width: 630%;
+	    border-radius: 7px;
+	    box-shadow: none;
+	    text-shadow: none;
+	    border-color: rgba(140, 138, 138, 0.17);
+	}
+}
+
+.fa-search{
+	 font-size: 17px;
+    position: absolute;
+    top: 19px;
+    left: 590%;
+    color: black;
+}
 /* FILTROS */
 .cajas-filtros{
 	width:90%;
@@ -63,8 +83,9 @@ nav{
     height: 55px;
     p{
     	position: relative;
-    	top: 7px;
-    	left: 23%;
+	    top: 16px;
+	    left: 23%;
+	    font-weight: 900;
     }
 }
 
@@ -79,16 +100,150 @@ nav{
     height: 55px;
     p{
     	position: relative;
-    	top: 7px;
-    	left: 23%;
+	    top: 16px;
+	    left: 23%;
+	    font-weight: 900;
     }
 }
 
+.caja-tag3{
+    background-image: url(../img/3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 9px;
+    color: white;
+     width: 276%;
+    height: 55px;
+    position: relative;
+    left: 107%;
+    p{
+    	position: relative;
+	    top: 16px;
+	    left: 23%;
+	    font-weight: 900;
+    }
+}
 
+.caja-tag4{
+    background-image: url(../img/4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 9px;
+    color: white;
+     width: 276%;
+    height: 55px;
+    position: relative;
+	left: 212%;
+    p{
+    	position: relative;
+	    top: 16px;
+	    left: 23%;
+	    font-weight: 900;
+    }
+}
+
+.caja-tag5{
+    background-image: url(../img/5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 9px;
+    color: white;
+     width: 276%;
+    height: 55px;
+    position: relative;
+	 left: 320%;
+    p{
+    	position: relative;
+	    top: 16px;
+	    left: 23%;
+	    font-weight: 900;
+    }
+}
+
+.caja-tag6{
+    background-image: url(../img/6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 9px;
+    color: white;
+     width: 276%;
+    height: 55px;
+    position: relative;
+	left: 426%;
+    p{
+    	position: relative;
+	    top: 16px;
+	    left: 23%;
+	    font-weight: 900;
+    }
+}
+
+.caja-tag7{
+    background-image: url(../img/7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 9px;
+    color: white;
+     width: 276%;
+    height: 55px;
+    position: relative;
+	left: 526%;
+    p{
+    	position: relative;
+	    top: 16px;
+	    left: 23%;
+	    font-weight: 900;
+    }
+}
+
+.caja-tag8{
+    background-image: url(../img/8.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 9px;
+    color: white;
+     width: 276%;
+    height: 55px;
+    position: relative;
+	left: 627%;
+    p{
+    	position: relative;
+	    top: 16px;
+	    left: 23%;
+	    font-weight: 900;
+    }
+}
+
+.caja-tag9{
+    background-image: url(../img/9.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 9px;
+    color: white;
+     width: 276%;
+    height: 55px;
+    position: relative;
+	left: 727%;
+    p{
+    	position: relative;
+	    top: 16px;
+	    left: 23%;
+	    font-weight: 900;
+    }
+}
+
+/* CONTENEDORES */
 
 .contenedor{
 	width: 90%;
-	margin:15px auto;
+    margin: 53px 14%;
 }
 
 .elemento{
@@ -98,11 +253,15 @@ nav{
 	margin-right:15px;
 	margin-bottom:15px;
 	box-shadow:0 1px 2px 0 rgba(0,0,0,0.22);
+	border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
 	p{
 		padding: 10px;
 		font-size:13px;
 	}
 	img{
 		width:100%;
+		border-top-left-radius: 9px;
+    	border-top-right-radius: 9px;
 	}
 }
