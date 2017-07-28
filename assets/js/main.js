@@ -1,13 +1,14 @@
 $(document).ready(function() {
 
-	$('.contenedor').masonry({
+	json.forEach(function(e){
+		var img = e.id+1;
+		$('.contenedor').append("<div class='elemento'><img src='dist/img/"+ img+ ".jpg'><p class='title'>"+ e.title+ "</p><p>"+ e.description+"</p></div>");
+	})
+
+		$('.contenedor').masonry({
   		itemSelector: '.elemento',
 	});
-    var html = "";
-    json.search_results.forEach(function (e) {
-    	var titulo = e.title;
-        html += $('.elemento').append("<p class='title'>" + titulo+ "</p>");
-    })
+
 	/* MODAL */ 
 	$(".open").click(function(event) {
 		var img = $(this).attr("src");
