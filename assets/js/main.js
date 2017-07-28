@@ -1,7 +1,6 @@
 $(document).ready(function() {
-	$('.grid').masonry({
+	$('.contenedor').masonry({
   // options
-  itemSelector: '.grid-item',
-  columnWidth: 200
+  itemSelector: '.elemento',
 	});
 });
