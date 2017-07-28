@@ -3,16 +3,17 @@ $(document).ready(function() {
 	$('.contenedor').masonry({
   		itemSelector: '.elemento',
 	});
-
-	json.forEach(function(e){
-		var title = e.title;
-		$('.elemento').append("<p class='titulo'>"+ title+"</p>");
-		for(var i = 0; i < e; i++){
-			var element = e.title[i];
-			console.log(element);
-			//$('.elemento').append("<p class='titulo'>"+ element+"</p>");
-		}
-		//$(".elemento").append("<p class='titulo'>"+ e.title+"</p>");
-	})
-
+    var html = "";
+    json.search_results.forEach(function (e) {
+    	var titulo = e.title;
+        html += $('.elemento').append("<p class='title'>" + titulo+ "</p>");
+    })
+	/* MODAL */ 
+	$(".open").click(function(event) {
+		var img = $(this).attr("src");
+		var muestraIMG = "<div id='apear_image_div' onClick='closeImage'></div>";
+		muestraIMG = muestraIMG.concat("<img id='mi_img' src='dest/img/"+ 1+ "'.jpg/>");
+		$('body').append(muestraIMG);
+		
+	});
 });
