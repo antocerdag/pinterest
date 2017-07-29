@@ -1,14 +1,16 @@
 $(document).ready(function() {
 
 
+
+	json.forEach(function(e){
+		var img = e.id;
+		$('.contenedor').append("<div class='elemento'><img class='lazy open image'href='#openmodal' src='dist/img/"+ img+ ".jpg'><i class='fa fa-thumb-tack icono' aria-hidden='true'></i><i class='fa fa-check icono' aria-hidden='true'></i><p class='title'>"+ e.title+ "</p><br><p class='description'>"+ e.description+"</p><p class='user'>"+e.username+"   "+"#"+e.hashtag+"</p>"+"</div>");
+
+		$("#modal").append("<div class='img-modal' style='display:flex'><img id='modal' src='dist/img/"+ img+ ".jpg'></div>");
+	})
     $("img.lazy").lazyload({
     	effect: 'fadeIn',
     });
-
-	json.forEach(function(e){
-		var img = e.id+1;
-		$('.contenedor').append("<div class='elemento'><img class='lazy' src='dist/img/"+ img+ ".jpg'><i class='fa fa-thumb-tack icono' aria-hidden='true'></i><i class='fa fa-check icono' aria-hidden='true'></i><p class='title'>"+ e.title+ "</p><br><p class='description'>"+ e.description+"</p><p class='user'>"+e.username+"   "+"#"+e.hashtag+"</p></div>");
-	})
 
 
 		var $container = $('.contenedor'); 
@@ -16,13 +18,31 @@ $(document).ready(function() {
 			$container.masonry();
 		});
 
-	/* MODAL */ 
-	$(".open").click(function(event) {
-		var img = $(this).attr("src");
-		var muestraIMG = "<div id='apear_image_div' onClick='closeImage'></div>";
-		muestraIMG = muestraIMG.concat("<img id='mi_img' data-original='dest/img/"+ 1+ "'.jpg/>");
-		$('body').append(muestraIMG);
-		
-	});
+	imgModal();
 });
 
+function imgModal(){
+	var img = Array.from(document.getElementsByClassName("image"));
+	var modal = document.getElementById("imgproductos");
+	var bodyModal, close, img;
+
+	img.forEach(function(foto){
+		foto.addEventListener("click", function(){
+			modal.innerHTML = "";
+			bodyModal = document.createElement("div");
+			bodyModal.classList.add("modal-body");
+			bodyModal.innerHTML = foto.outerHTML;
+			modal.appendChild(bodyModal);
+			modal.classList.remove("hide");
+			close = document.createElement("div");
+			close.classList.add("close");
+			img = document.createElement("img");
+			img.setAttribute("src", "http://tojaeurope.com/gallery/Close-icon.png");
+			close.appendChild(img);
+			modal.appendChild(close);
+			close.addEventListener("click",function(){
+				modal.classList.add("hide");
+			});
+		});		
+	});
+}

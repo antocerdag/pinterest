@@ -272,6 +272,10 @@ nav{
         border-bottom-left-radius: 9px;
         border-bottom-right-radius: 9px;
 	}
+    img:hover{
+        background-color: #E6E6E6;
+        cursor: pointer;
+    }
     .icono{
         font-size:10px;
         color:gray;
@@ -286,25 +290,32 @@ nav{
 }
 
 /* MODAL */ 
-
-.modal{
-	background-color: #111;
-	box-shadow: 0px 0px 10px #000;
-	border-radius: 5px;
-	color: #fff;
-	margin: 10% auto;
-	padding: 20px;
-	position: relative;
-	width: 400px;
+#imgproductos{
+  background-color: $color_fondo_modal;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-h2{
-	color: #fff;
-	font-size: 2em;
-	margin-bottom: 10px;
+#imgproductos .modal-body{
+  width: 60%;
+  margin: 0 auto;
+
+
 }
 
-/*p{
-	color: #fff;
-	font-size: 1.2em;
-}*/
+#imgproductos .close{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+#imgproductos .close img{
+  width: 60px;
+}
+
+
