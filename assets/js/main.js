@@ -5,9 +5,10 @@ $(document).ready(function() {
 		$('.contenedor').append("<div class='elemento'><img src='dist/img/"+ img+ ".jpg'><p class='title'>"+ e.title+ "</p><p>"+ e.description+"</p></div>");
 	})
 
-		$('.contenedor').masonry({
-  		itemSelector: '.elemento',
-	});
+		var $container = $('.contenedor'); 
+			$container.imagesLoaded( function() {
+			$container.masonry();
+		});
 
 	/* MODAL */ 
 	$(".open").click(function(event) {
