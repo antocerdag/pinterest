@@ -6,8 +6,8 @@ $(document).ready(function() {
 		var img = e.id;
 		$('.contenedor').append("<div class='elemento'><img class='lazy open image'href='#openmodal' src='dist/img/"+ img+ ".jpg'><i class='fa fa-thumb-tack icono' aria-hidden='true'></i><i class='fa fa-check icono' aria-hidden='true'></i><p class='title'>"+ e.title+ "</p><br><p class='description'>"+ e.description+"</p><p class='user'>"+e.username+"   "+"#"+e.hashtag+"</p>"+"</div>");
 
-		$("#modal").append("<div class='img-modal' style='display:flex'><img id='modal' src='dist/img/"+ img+ ".jpg'></div>");
-	})
+		
+	});
     $("img.lazy").lazyload({
     	effect: 'fadeIn',
     });
@@ -23,7 +23,8 @@ $(document).ready(function() {
 
 function imgModal(){
 	var img = Array.from(document.getElementsByClassName("image"));
-	var modal = document.getElementById("imgproductos");
+	var title = Array.from(document.getElementsByClassName("title"));
+	var modal = document.getElementById("modalimg");
 	var bodyModal, close, img;
 
 	img.forEach(function(foto){
@@ -31,7 +32,7 @@ function imgModal(){
 			modal.innerHTML = "";
 			bodyModal = document.createElement("div");
 			bodyModal.classList.add("modal-body");
-			bodyModal.innerHTML = foto.outerHTML;
+			bodyModal.innerHTML = foto.outerHTML; //agrego la img
 			modal.appendChild(bodyModal);
 			modal.classList.remove("hide");
 			close = document.createElement("div");
@@ -45,4 +46,5 @@ function imgModal(){
 			});
 		});		
 	});
+
 }

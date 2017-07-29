@@ -290,7 +290,7 @@ nav{
 }
 
 /* MODAL */ 
-#imgproductos{
+#modalimg{
   background-color: $color_fondo_modal;
   width: 100%;
   height: 100%;
@@ -300,21 +300,27 @@ nav{
   z-index: 1;
 }
 
-#imgproductos .modal-body{
-  width: 60%;
-  margin: 0 auto;
-
-
+#modalimg .modal-body{
+    width: 21%;
+    height: 400px;
+    margin: 21px auto;
+    background-color: #fff;
 }
 
-#imgproductos .close{
+.modal-body img{
+    width: 92%;
+    margin-left: 4%;
+    border-radius: 13px;
+}
+
+#modalimg .close{
   position: absolute;
   top: 20px;
   right: 20px;
   cursor: pointer;
 }
 
-#imgproductos .close img{
+#modalimg .close img{
   width: 60px;
 }
 
