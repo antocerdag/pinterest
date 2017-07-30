@@ -5,13 +5,20 @@ $(document).ready(function() {
 	json.forEach(function(e){
 		var img = e.id;
 		$('.contenedor').append("<div class='elemento'><img class='lazy open image'href='#openmodal' src='dist/img/"+ img+ ".jpg'><i class='fa fa-thumb-tack icono' aria-hidden='true'></i><i class='fa fa-check icono' aria-hidden='true'></i><p class='title'>"+ e.title+ "</p><br><p class='description'>"+ e.description+"</p><p class='user'>"+e.username+"   "+"#"+e.hashtag+"</p>"+"</div>");
-
+		$(window).scroll(function() {
+		  var aTop = 200;
+		    if($(this).scrollTop()>=aTop){
+		    	$('.contenedor2').append("<div class='elemento'><img class='lazy open image'href='#openmodal' src='dist/img/"+ img+ ".jpg'><i class='fa fa-thumb-tack icono' aria-hidden='true'></i><i class='fa fa-check icono' aria-hidden='true'></i><p class='title'>"+ e.title+ "</p><br><p class='description'>"+ e.description+"</p><p class='user'>"+e.username+"   "+"#"+e.hashtag+"</p>"+"</div>");
+		    }
+		});
 		
 	});
+
+	
+
     $("img.lazy").lazyload({
     	effect: 'fadeIn',
     });
-
 
 		var $container = $('.contenedor'); 
 			$container.imagesLoaded( function() {
